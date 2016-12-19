@@ -1,6 +1,8 @@
 # ToneSweepFiberLocation
 Contains MATLAB files and data series necessary for running the method described in the article "A Low-Frequency Tone Sweep Method for Fault Location in Optical Fiber Links"
 
+The software was designed and works in MATLAB 2015.
+
 ## Submodules:
 
 1. FreqToneFaultLocation_Main.m
@@ -23,11 +25,9 @@ See the existing ones for reference.
 
 1. CallibratedData.csv
     Is a CSV file, with N lines (one for each measurement) and with 5 columns
-    1. Positions in meters; 
-    2. ?
-    3. ?
-    4. ?
-    5. ?
+    1. Frequency; 
+    2. Real part of new measurements
+    3. Imaginary part of new measurements
     
 2. signature.csv
     Is a CSV file, with K lines (one for each known fault) and 2 columns for a event list
