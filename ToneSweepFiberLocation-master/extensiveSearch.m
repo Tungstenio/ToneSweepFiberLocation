@@ -49,7 +49,7 @@ for i = 1:Lmax-1
         [originalCoeffs,newCoeff] = CalcCoeff(signatureFaults,newFault,InputPos);
         Xfit           = sum(Xsignature*originalCoeffs,2);
         Xgoal          = Xfit + newCoeff*X(:,i);
-        error          = immse(Xgoal,Y);
+        error          = mean( (Xgoal-Y).^2 );%immse(Xgoal,Y);
         if error < errorActual
             errorActual = error;
             pos         = i;
